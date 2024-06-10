@@ -4,24 +4,18 @@ import ScoreDropdown from './components/ScoreDropdown';
 import ScorePerBall from './components/ScorePerBall';
 
 function App() {
-  const [currentScore, setCurrentScore] = useState(['','','','','','']);
-  const [overBall, setOverBall] = useState([1,2,3,4,5,6]);
-
-  console.log('currentScore:',currentScore);
+  const [currentScore, setCurrentScore] = useState(new Array(6).fill(''));
 
   return (
     <div className="App">
+      <h2 className='heading'>Cricket Over Tracker</h2>
       <ScoreDropdown 
         currentScore={currentScore}
         setCurrentScore={setCurrentScore}
-        setOverBall={setOverBall}
       />
 
       <ScorePerBall 
         currentScore={currentScore}
-        setCurrentScore={setCurrentScore}
-        overBall={overBall}
-        setOverBall={setOverBall}
       />
 
 

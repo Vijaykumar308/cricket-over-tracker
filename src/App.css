@@ -1,17 +1,103 @@
 .App {
-  
+    background-color: white;
+    width: 50vw;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
+    /* box-shadow: rgba(100, 100, 111, 0.5) 6px 4px 12px 6px; */
+    border-radius: 1rem;
+}
+.heading {
+    font-size: 2.4vw;
+    text-align: center;
+    font-weight: 500;
+    padding: 1rem 0rem;
+}
+
+
+.custom-select-container {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    border: 2px solid #133A75;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    width: 200px;
+    color: #333;
+}
+
+.custom-select::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #133A75;
+}
+
+.custom-select:hover,
+.custom-select:focus {
+    border-color: #02A7D1;
+}
+
+.custom-select option {
+    padding: 10px;
+    background-color: #fff;
 }
 
 .display-balls-container {
-    width: 450px;
-    background-color: antiquewhite;
+    margin-top: 2rem;
+    background-color: var(--color-red);
     display: flex;
+    border-radius: 0px 0px 5px;
     gap: 10px;
+}
+.four-runs {
+    background: #255ba1;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.six-runs {
+    background: #0342d3;
+    font-size: 18px;
+    font-weight: 600;
+}
+ 
+.display-balls-container .score {
+    flex: 1;
+    font-size: 2rem;
+    background-color: palegreen;
+    border-radius: 0px 20px 20px 0px;
+    padding: .8rem 2.6rem;
+}
+
+.over-container{
+    flex: 5;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    letter-spacing: .2rem;
+}
+
+.balls {
+    display: flex;
+    gap: 1.3rem;
 }
 
 .per-ball {
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 2px solid rgb(236, 167, 167);
    text-align: center;

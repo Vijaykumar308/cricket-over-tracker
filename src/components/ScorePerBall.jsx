@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-function ScorePerBall({ currentScore, overBall, setOverBall}) {
+function ScorePerBall({currentScore}) {
 
     const currentBall = currentScore.length - 1;
 
@@ -23,26 +23,24 @@ function ScorePerBall({ currentScore, overBall, setOverBall}) {
     return (
         <div>
             <div className="display-balls-container">
-                {
-                    // overBall.map((elem, index) => {
-                    //     return (
-                    //         <div key={index} className="per-ball">  
-                    //             {currentBall === index ? currentScore[currentScore.length - 1] : ''}
-                    //         </div>
-                    //     )
-                    // })
-
-                    currentScore.map((score, index) => {
-                        return (
-                            <div key={index} className="per-ball">  
-                                {score} {/* {currentBall === index ? currentScore[currentScore.length - 1] : ''} */}
-                            </div>
-                        )
-                    })
-                }
+                <div className="score">{getTotleScore(currentScore)} / 0</div>
+                <div className="over-container">
+                    {/* <p className="blower-name">Over: 2/6</p> */}
+                    <div className="balls">
+                        {
+                            currentScore.map((score, index) => {
+                                return (
+                                    <span key={index} className="per-ball">  
+                                        {score}
+                                    </span>
+                                )
+                            })
+                        }
+                    </div>
+                   
+                </div>
             </div>
 
-            <p>Totle Score: {getTotleScore(currentScore)}</p>
         </div>
     )
 }

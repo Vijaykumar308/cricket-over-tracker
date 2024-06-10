@@ -1,36 +1,39 @@
 import React, { useState } from 'react'
 
 let MAX_BALL_IN_OVER = 6;
-function ScoreDropdown({currentScore, setCurrentScore, setOverBall}) {
+function ScoreDropdown({currentScore, setCurrentScore}) {
+
   const [ballCount, setBallCount] = useState(0);
 
   const handleScoreChange = (e) => {
+
     const inValidBalls = ['NB', 'WD'];
+
     const newScore = [...currentScore];
+
     if(inValidBalls.includes(e.target.value)) {
-      // setCurrentScore([...currentScore, `1${e.target.value}`]);
-      newScore[ballCount] = `1${e.target.value}`;
-      setCurrentScore([...newScore,'']);
-      setOverBall((preBall) => [...preBall, `${e.target.value}`]);
-      setBallCount((prev) => prev+1);
       MAX_BALL_IN_OVER++;
-    }
-    
-    else {
-      setBallCount((prev) => prev+1);
+
+      newScore[ballCount] = `1${e.target.value}`;
+
+      setCurrentScore([...newScore, '']);
+    } else {
       newScore[ballCount] = +e.target.value;
       setCurrentScore(newScore);
     }
+
+    setBallCount((prev) => prev+1);
   }
 
   return (
-    <div>
+    <div className='custom-select-container'>
         <label htmlFor="score">Score</label>
         <select 
           name="score" 
           id="score" 
           onChange={(e) => handleScoreChange(e)}
           disabled={ballCount === MAX_BALL_IN_OVER}
+          className='custom-select'
         >
             <option value="" hidden > --select-- </option>
             <option value="1"> 1 </option>
