@@ -7,7 +7,7 @@ function App() {
   const [currentScore, setCurrentScore] = useState([]);
   const [overBall, setOverBall] = useState([1,2,3,4,5,6]);
 
-  console.log(currentScore);
+  console.log('currentScore:',currentScore);
 
   return (
     <div className="App">
