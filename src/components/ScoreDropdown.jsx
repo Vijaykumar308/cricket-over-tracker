@@ -1,21 +1,25 @@
 import React, { useState } from 'react'
 
-const MAX_BALL_IN_OVER = 6;
+let MAX_BALL_IN_OVER = 6;
 function ScoreDropdown({currentScore, setCurrentScore, setOverBall}) {
   const [ballCount, setBallCount] = useState(0);
 
   const handleScoreChange = (e) => {
     const inValidBalls = ['NB', 'WD'];
-
+    const newScore = [...currentScore];
     if(inValidBalls.includes(e.target.value)) {
-      setCurrentScore([...currentScore, `1${e.target.value}`]);
-
+      // setCurrentScore([...currentScore, `1${e.target.value}`]);
+      newScore[ballCount] = `1${e.target.value}`;
+      setCurrentScore([...newScore,'']);
       setOverBall((preBall) => [...preBall, `${e.target.value}`]);
+      setBallCount((prev) => prev+1);
+      MAX_BALL_IN_OVER++;
     }
     
     else {
       setBallCount((prev) => prev+1);
-      setCurrentScore([...currentScore, +e.target.value]);
+      newScore[ballCount] = +e.target.value;
+      setCurrentScore(newScore);
     }
   }
 

@@ -24,10 +24,18 @@ function ScorePerBall({ currentScore, overBall, setOverBall}) {
         <div>
             <div className="display-balls-container">
                 {
-                    overBall.map((elem, index) => {
+                    // overBall.map((elem, index) => {
+                    //     return (
+                    //         <div key={index} className="per-ball">  
+                    //             {currentBall === index ? currentScore[currentScore.length - 1] : ''}
+                    //         </div>
+                    //     )
+                    // })
+
+                    currentScore.map((score, index) => {
                         return (
                             <div key={index} className="per-ball">  
-                                {currentBall === index ? currentScore[currentScore.length - 1] : ''}
+                                {score} {/* {currentBall === index ? currentScore[currentScore.length - 1] : ''} */}
                             </div>
                         )
                     })

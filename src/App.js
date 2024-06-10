@@ -4,7 +4,7 @@ import ScoreDropdown from './components/ScoreDropdown';
 import ScorePerBall from './components/ScorePerBall';
 
 function App() {
-  const [currentScore, setCurrentScore] = useState([]);
+  const [currentScore, setCurrentScore] = useState(['','','','','','']);
   const [overBall, setOverBall] = useState([1,2,3,4,5,6]);
 
   console.log('currentScore:',currentScore);
