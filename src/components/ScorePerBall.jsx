@@ -1,6 +1,6 @@
 function ScorePerBall({currentScore}) {
     function getTotleScore(arr) {
-        const inValidBalls = ['1NB', '1WD'];
+        const inValidBalls = ['1NB', '1WD','Dot'];
 
         const totalRuns = arr.reduce((acc, elem) => {
             if (inValidBalls.includes(elem)) {

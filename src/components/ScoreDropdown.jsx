@@ -6,14 +6,19 @@ function ScoreDropdown({currentScore, setCurrentScore}) {
 
   const handleScoreChange = (e) => {
 
-    const inValidBalls = ['NB', 'WD'];
+    const inValidBalls = ['NB', 'WD','Dot'];
 
     const newScore = [...currentScore];
 
     if(inValidBalls.includes(e.target.value)) {
       MAX_BALL_IN_OVER++;
-
-      newScore[ballCount] = `1${e.target.value}`;
+      if(e.target.value == "Dot") {
+        newScore[ballCount] = `0${e.target.value}`;
+      }
+      else {
+        
+        newScore[ballCount] = `1${e.target.value}`;
+      }
 
       setCurrentScore([...newScore, '']);
     } else {
@@ -35,6 +40,7 @@ function ScoreDropdown({currentScore, setCurrentScore}) {
           className='custom-select'
         >
             <option value="" hidden > --select-- </option>
+            <option value="0"> Dot Ball </option>
             <option value="1"> 1 </option>
             <option value="2"> 2 </option>
             <option value="3"> 3 </option>

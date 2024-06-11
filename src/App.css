@@ -8,6 +8,7 @@
     background-size: 100% 100%;
     position: relative;
 }
+
 .heading {
     font-size: 2.4rem;
     text-align: center;
@@ -173,11 +174,14 @@
     }
     .App {
         width: 90vw;
-        height: 500px; 
-    }
 
+        background-image: none;
+    }
+    .heading {
+        padding: 3rem 0;
+    }
     .display-balls-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .display-balls-container .score  {
@@ -187,11 +191,17 @@
 
     .score-lable {
         margin-left: 0;
+        color: black;
+        text-shadow: none;
+        font-size: 3rem;
     }
     .custom-select {
         width: 80vw;
     }
 
+    .over-container {
+        justify-content: center;
+    }
     .over-container .balls {   
         flex-wrap: wrap;
     }
