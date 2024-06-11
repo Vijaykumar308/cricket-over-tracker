@@ -1,3 +1,4 @@
+/* @import url(''); */
 .App {
     background-color: white;
     width: 50vw;
@@ -5,18 +6,38 @@
     box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
     /* box-shadow: rgba(100, 100, 111, 0.5) 6px 4px 12px 6px; */
     border-radius: 1rem;
+    /* padding: 15rem 0; */
+    height: 450px;
+    background-image: url('/public/images/cricket_ground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 .heading {
     font-size: 2.4vw;
     text-align: center;
     font-weight: 500;
     padding: 1rem 0rem;
+    background-color: #255ba1;
+    color: #fff;
 }
 
+.score-lable {
+    margin-left: -15rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 20px black;
+}
 
 .custom-select-container {
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-transform: uppercase;
+    gap: .6rem;
+    margin-top: 2rem;
 }
 
 .custom-select {
@@ -34,16 +55,6 @@
     color: #333;
 }
 
-.custom-select::after {
-    content: '▼';
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: #133A75;
-}
-
 .custom-select:hover,
 .custom-select:focus {
     border-color: #02A7D1;
@@ -55,11 +66,15 @@
 }
 
 .display-balls-container {
-    margin-top: 2rem;
+    /* margin-top: 15rem; */
     background-color: var(--color-red);
     display: flex;
     border-radius: 0px 0px 5px;
     gap: 10px;
+
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 .four-runs {
     background: #255ba1;
@@ -77,17 +92,26 @@
     flex: 1;
     font-size: 2rem;
     background-color: palegreen;
-    border-radius: 0px 20px 20px 0px;
-    padding: .8rem 2.6rem;
+    border-radius: 0px 3rem 3rem 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .over-container{
-    flex: 5;
+    flex: 4;
     gap: 2rem;
     display: flex;
     align-items: center;
     color: #fff;
     letter-spacing: .2rem;
+    padding: 1rem 0;
+}
+ 
+.overs {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-left: 2rem;
 }
 
 .balls {
@@ -95,10 +119,28 @@
     gap: 1.3rem;
 }
 
-.per-ball {
-    width: 30px;
-    height: 30px;
+.runs {
+    background-color: #255ba1;
     border-radius: 50%;
-    border: 2px solid rgb(236, 167, 167);
+    display: none;
+}
+
+.runs:not(:empty) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+.per-ball {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--bg-color-500);
    text-align: center;
+   font-size: 1.4rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }

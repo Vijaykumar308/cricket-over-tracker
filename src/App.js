@@ -6,6 +6,8 @@ import ScorePerBall from './components/ScorePerBall';
 function App() {
   const [currentScore, setCurrentScore] = useState(new Array(6).fill(''));
 
+
+
   return (
     <div className="App">
       <h2 className='heading'>Cricket Over Tracker</h2>

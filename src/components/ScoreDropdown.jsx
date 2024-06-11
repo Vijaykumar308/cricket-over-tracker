@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from "react";
 
 let MAX_BALL_IN_OVER = 6;
 function ScoreDropdown({currentScore, setCurrentScore}) {
-
   const [ballCount, setBallCount] = useState(0);
 
   const handleScoreChange = (e) => {
@@ -27,7 +26,7 @@ function ScoreDropdown({currentScore, setCurrentScore}) {
 
   return (
     <div className='custom-select-container'>
-        <label htmlFor="score">Score</label>
+        <label htmlFor="score" className="score-lable">Score</label>
         <select 
           name="score" 
           id="score" 

@@ -1,13 +1,8 @@
-import { useEffect } from "react";
-
 function ScorePerBall({currentScore}) {
-
-    const currentBall = currentScore.length - 1;
-
     function getTotleScore(arr) {
         const inValidBalls = ['1NB', '1WD'];
-
-        const sum = arr.reduce((acc, elem) => {
+        
+        const totleRuns = arr.reduce((acc, elem) => {
             if (inValidBalls.includes(elem)) {
                 return acc + 1;
             }
@@ -17,21 +12,20 @@ function ScorePerBall({currentScore}) {
 
         }, 0);
 
-        return sum;
+        return totleRuns;
     }
 
     return (
         <div>
             <div className="display-balls-container">
-                <div className="score">{getTotleScore(currentScore)} / 0</div>
+                <div className="score">{getTotleScore(currentScore)} / 0  <span className="overs">0.2 Overs</span></div>
                 <div className="over-container">
-                    {/* <p className="blower-name">Over: 2/6</p> */}
                     <div className="balls">
                         {
                             currentScore.map((score, index) => {
                                 return (
                                     <span key={index} className="per-ball">  
-                                        {score}
+                                        <p className="runs">{score}</p>
                                     </span>
                                 )
                             })
