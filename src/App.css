@@ -1,20 +1,15 @@
-/* @import url(''); */
 .App {
-    background-color: white;
-    width: 50vw;
-    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-    box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
-    /* box-shadow: rgba(100, 100, 111, 0.5) 6px 4px 12px 6px; */
+    width: 70vw; 
+    height: 450px; 
     border-radius: 1rem;
-    /* padding: 15rem 0; */
-    height: 450px;
+    box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
     background-image: url('/public/images/cricket_ground.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     position: relative;
 }
 .heading {
-    font-size: 2.4vw;
+    font-size: 2.4rem;
     text-align: center;
     font-weight: 500;
     padding: 1rem 0rem;
@@ -67,7 +62,7 @@
 
 .display-balls-container {
     /* margin-top: 15rem; */
-    background-color: var(--color-red);
+    background-color: #fff;
     display: flex;
     border-radius: 0px 0px 5px;
     gap: 10px;
@@ -143,4 +138,60 @@
    display: flex;
    align-items: center;
    justify-content: center;
+}
+
+@media (max-width:920px ) and (min-width:481px) {
+    body {
+        /* background-color: red; */
+    }
+    html {
+        font-size: 50%;
+    }
+    .App {
+        width: 80vw;
+    }
+   
+    .display-balls-container {
+        flex-wrap: wrap;
+    }
+
+    .display-balls-container .score {
+        flex: 2;
+    }
+    .over-container {
+        flex: 4;
+    }
+}
+
+@media (max-width:480px) {
+    body {
+        /* background-color: yellow; */
+    }
+
+    html {
+        font-size: 50%;
+    }
+    .App {
+        width: 90vw;
+    }
+
+    .display-balls-container {
+        flex-direction: column;
+    }
+
+    .display-balls-container .score  {
+        padding: 1.5rem;
+        border-radius: 2px;
+    }
+
+    .score-lable {
+        margin-left: 0;
+    }
+    .custom-select {
+        width: 80vw;
+    }
+
+    .over-container .balls {   
+        flex-wrap: wrap;
+    }
 }

@@ -16,7 +16,8 @@ html {
   font-size: 62.5%;
 }
 body {
-  background-color: var(--bg-color-800);
+  /* background-color: var(--bg-color-800); */
+  background-color: #f8f8f8;
   font-size: 1.6rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: grid;
