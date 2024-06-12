@@ -23,7 +23,7 @@ function ScorePerBall({currentScore}) {
         <div>
             <div className="display-balls-container">
                 {/* {console.log(countNumbers(currentScore))} */}
-                <div className="score">{getTotleScore(currentScore)} / 0  <span className="overs">{countBalls(currentScore) != 6 ? `0. ${countBalls(currentScore)} Overs` :  "1 Overs" }</span></div>
+                <div className="score"><span className="scoreboard">{getTotleScore(currentScore)}-0</span>  <span className="overs">{countBalls(currentScore) != 6 ? `0. ${countBalls(currentScore)} Overs` :  "1 Overs" }</span></div>
                 <div className="over-container">
                     <div className="balls">
                         {

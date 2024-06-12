@@ -31,7 +31,7 @@ function ScoreDropdown({currentScore, setCurrentScore}) {
 
   return (
     <div className='custom-select-container'>
-        <label htmlFor="score" className="score-lable">Score</label>
+        {/* <label htmlFor="score" className="score-lable">Score</label> */}
         <select 
           name="score" 
           id="score" 

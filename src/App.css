@@ -1,11 +1,8 @@
 .App {
     width: 70vw; 
-    height: 450px; 
-    border-radius: 1rem;
+    height: 350px;
+    border-radius: 1rem 1rem 1rem 2rem;
     box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
-    background-image: url('/public/images/cricket_ground.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
     position: relative;
 }
 
@@ -16,7 +13,7 @@
     padding: 1rem 0rem;
     background-color: #255ba1;
     color: #fff;
-}
+}   
 
 .score-lable {
     margin-left: -15rem;
@@ -49,6 +46,8 @@
     outline: none;
     width: 200px;
     color: #333;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
 }
 
 .custom-select:hover,
@@ -63,11 +62,11 @@
 
 .display-balls-container {
     /* margin-top: 15rem; */
-    background-color: #fff;
+    /* background-color: #b19292; */
     display: flex;
     border-radius: 0px 0px 5px;
     gap: 10px;
-
+    border-radius: 2rem;
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -85,17 +84,30 @@
 }
  
 .display-balls-container .score {
-    flex: 1;
+    /* flex: 1; */
     font-size: 2rem;
-    background-color: palegreen;
+    /* background-color: var(--bg-color-800); */
+    color: #fff;
     border-radius: 0px 3rem 3rem 0px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 2rem;
+    /* padding-inline: 2rem; */
+}
+
+.scoreboard {
+    background-color: red;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    border-radius: 2rem 2rem 2rem 2rem;
+    padding-inline: 4rem;
+    /* z-index: 33333; */
 }
 
 .over-container{
-    flex: 4;
+    /* flex: 6; */
     gap: 2rem;
     display: flex;
     align-items: center;
@@ -107,7 +119,13 @@
 .overs {
     font-size: 1.5rem;
     display: inline-block;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
+    background-color: var(--bg-color-500);
+    height: 55px;
+    display: grid;
+    place-items: center;
+    border-radius: 0px 2rem 2rem 0rem;
+    padding-inline: 1rem;
 }
 
 .balls {
