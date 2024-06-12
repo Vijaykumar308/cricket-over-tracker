@@ -30,7 +30,8 @@
     color: #fff;
     text-transform: uppercase;
     gap: .6rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
+    padding-top: 2rem;
 }
 
 .custom-select {
@@ -86,22 +87,20 @@
 .display-balls-container .score {
     /* flex: 1; */
     font-size: 2rem;
-    /* background-color: var(--bg-color-800); */
+    background-color: var(--bg-color-500);
     color: #fff;
-    border-radius: 0px 3rem 3rem 0px;
+    border-radius: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 2rem;
-    /* padding-inline: 2rem; */
 }
 
 .scoreboard {
-    background-color: red;
+    background-color: var(--bg-color-800);
     height: 55px;
     display: grid;
     place-items: center;
-    border-radius: 2rem 2rem 2rem 2rem;
+    border-radius: 2rem 3rem 3rem 2rem;
     padding-inline: 4rem;
     /* z-index: 33333; */
 }
@@ -124,7 +123,7 @@
     height: 55px;
     display: grid;
     place-items: center;
-    border-radius: 0px 2rem 2rem 0rem;
+    border-radius: 0px 3rem 3rem 0rem;
     padding-inline: 1rem;
 }
 

@@ -11,7 +11,7 @@ function App() {
   return (
     <>
     <div className="App">
-      <h2 className='heading'>Cricket Over Tracker</h2>
+      {/* <h2 className='heading'>Cricket Over Tracker</h2> */}
       <ScoreDropdown 
         currentScore={currentScore}
         setCurrentScore={setCurrentScore}
