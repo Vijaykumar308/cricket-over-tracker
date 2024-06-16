@@ -1,9 +1,12 @@
 .App {
-    width: 70vw; 
-    height: 350px;
-    border-radius: 1rem 1rem 1rem 2rem;
+    width: 60vw; 
+    height: 300px;
+    border-radius: 1rem 1rem 1rem 1rem;
     box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .heading {
@@ -66,11 +69,12 @@
     /* background-color: #b19292; */
     display: flex;
     border-radius: 0px 0px 5px;
-    gap: 10px;
     border-radius: 2rem;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    margin-left: 3rem;
+    flex-wrap: wrap;
+    gap: 3rem;
+    border-radius: 5rem;
+    border: 1px solid var(--bg-color-800);
 }
 .four-runs {
     background: #255ba1;
@@ -97,16 +101,17 @@
 
 .scoreboard {
     background-color: var(--bg-color-800);
+    width: 12.6rem;
     height: 55px;
     display: grid;
     place-items: center;
-    border-radius: 2rem 3rem 3rem 2rem;
+    border-radius: 3rem;
     padding-inline: 4rem;
-    /* z-index: 33333; */
+
 }
 
 .over-container{
-    /* flex: 6; */
+    /* flex: 4; */
     gap: 2rem;
     display: flex;
     align-items: center;
@@ -167,10 +172,12 @@
     }
     .App {
         width: 80vw;
+        background-color: red;
     }
    
     .display-balls-container {
         flex-wrap: wrap;
+        gap: 2rem;
     }
 
     .display-balls-container .score {

@@ -23,14 +23,14 @@ function ScorePerBall({currentScore}) {
         <div>
             <div className="display-balls-container">
                 {/* {console.log(countNumbers(currentScore))} */}
-                <div className="score"><span className="scoreboard">{getTotleScore(currentScore)}-0</span>  <span className="overs">{countBalls(currentScore) != 6 ? `0. ${countBalls(currentScore)} Overs` :  "1 Overs" }</span></div>
+                <div className="score"><span className="scoreboard">{getTotleScore(currentScore)}-0</span>  <span className="overs">{countBalls(currentScore) != 6 ? `1. ${countBalls(currentScore)} Overs` :  "2 Overs" }</span></div>
                 <div className="over-container">
                     <div className="balls">
                         {
                             currentScore.map((score, index) => {
                                 return (
                                     <span key={index} className="per-ball">  
-                                        <p className="runs">{score}</p>
+                                        <p className="runs">{(score === '1NB' || score === '1WD') ? score.slice(1) : score}</p>
                                     </span>
                                 )
                             })

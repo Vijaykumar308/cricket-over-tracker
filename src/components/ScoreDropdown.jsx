@@ -20,6 +20,8 @@ function ScoreDropdown({currentScore, setCurrentScore}) {
         newScore[ballCount] = `1${e.target.value}`;
       }
 
+      console.log('currentScore:',currentScore);
+
       setCurrentScore([...newScore, '']);
     } else {
       newScore[ballCount] = +e.target.value;
